@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+        <title>Karbonographer</title>
+    </head>
+    <body>
+      <div class="main-background">
+        <div class="watch-elements transition">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12 col-md-12">
+                <p class="title text-center">Karbonographer</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-3 offset-xs-3 col-sm-3 offset-sm-3 col-md-3 offset-md-2">
+                <p class="timer-label">Timer</p>
+                <input type="text" class="timer-input" id="timer-box" placeholder="HH:MM:SS" maxlength="8" onfocus="this.value=''" onclick="this.value=''">
+              </div>
+              <div class="col-xs-3 offset-xs-3 col-sm-3 offset-sm-0 col-md-3 offset-md-3">
+                <h2 class="break-label">Break</h2>
+                <input type="text" class="break-input" id="break-box" placeholder="HH:MM:SS" maxlength="8" onfocus="this.value=''" onclick="this.value=''">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="watch-face">
+                  <div class="row">
+                    <div class="digital-display">
+                      <p id="digital-display"></p>
+                    </div>
+                    <div class="timer-type">
+                      <div id="type-display"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="clock">
+                      <div class="minutes-container" id="minutes-container">
+                        <div class="minutes"></div>
+                      </div>
+                      <div class="hours-container" id="hours-container">
+                        <div class="hours"></div>
+                      </div>
+                      <div class="seconds-container" id="seconds-container">
+                        <div class="seconds"></div>
+                        <div class="center-pin"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="btn-container">
+                <button type="button" class="btn clock-btn start-stop-btn" id="start-stop"><p>Start</p></button>
+                <button type="button" class="btn clock-btn reset-btn" id="reset"><p>Reset</p></button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="footer">
+                <p>Created by: <a href="https://github.com/jpriggs">Jason Rigdon</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
