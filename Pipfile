@@ -8,8 +8,9 @@ name = "pypi"
 [packages]
 
 flask = "*"
-requests = "*"
 gunicorn = "*"
+requests = "*"
+"urllib3" = "*"
 
 
 [dev-packages]
